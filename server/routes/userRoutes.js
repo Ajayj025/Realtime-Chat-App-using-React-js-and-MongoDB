@@ -1,0 +1,12 @@
+const{ register}=require("../controllers/userControllers");
+const{ login }=require("../controllers/userControllers");
+const{ setAvatar }=require("../controllers/userControllers");
+const{ getAllUsers }=require("../controllers/userControllers");
+const{ logOut }=require("../controllers/userControllers");
+const router=require("express").Router();
+router.post("/register",register);
+router.post("/login",login);
+router.post("/setAvatar/:id", setAvatar);
+router.get("/allusers/:id", getAllUsers);
+router.get("/logout/:id", logOut);
+module.exports=router;
